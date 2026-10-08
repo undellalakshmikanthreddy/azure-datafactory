@@ -1,0 +1,49 @@
+{
+	"name": "wait_act_passing_para",
+	"properties": {
+		"activities": [
+			{
+				"name": "act_wait_pass_para",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": {
+						"value": "@pipeline().parameters.para1",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "act_wait_pass_para1",
+				"type": "Wait",
+				"dependsOn": [
+					{
+						"activity": "act_wait_pass_para",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": {
+						"value": "@pipeline().parameters.para2",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"para1": {
+				"type": "string"
+			},
+			"para2": {
+				"type": "int"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2026-09-26T05:35:41Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

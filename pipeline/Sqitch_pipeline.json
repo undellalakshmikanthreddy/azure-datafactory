@@ -1,0 +1,99 @@
+{
+	"name": "Sqitch_pipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "Switch1",
+				"type": "Switch",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"on": {
+						"value": "@variables('v1')",
+						"type": "Expression"
+					},
+					"cases": [
+						{
+							"value": "10",
+							"activities": [
+								{
+									"name": "sree_Wait1",
+									"type": "Wait",
+									"dependsOn": [],
+									"userProperties": [],
+									"typeProperties": {
+										"waitTimeInSeconds": {
+											"value": "@variables('v2')",
+											"type": "Expression"
+										}
+									}
+								}
+							]
+						},
+						{
+							"value": "20",
+							"activities": [
+								{
+									"name": "kanth_Wait",
+									"type": "Wait",
+									"dependsOn": [],
+									"userProperties": [],
+									"typeProperties": {
+										"waitTimeInSeconds": {
+											"value": "@variables('v2')",
+											"type": "Expression"
+										}
+									}
+								}
+							]
+						},
+						{
+							"value": "30",
+							"activities": [
+								{
+									"name": "reddy_Wait",
+									"type": "Wait",
+									"dependsOn": [],
+									"userProperties": [],
+									"typeProperties": {
+										"waitTimeInSeconds": {
+											"value": "@variables('v2')",
+											"type": "Expression"
+										}
+									}
+								}
+							]
+						}
+					],
+					"defaultActivities": [
+						{
+							"name": "default_wait",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": {
+									"value": "@variables('v2')",
+									"type": "Expression"
+								}
+							}
+						}
+					]
+				}
+			}
+		],
+		"variables": {
+			"v1": {
+				"type": "String",
+				"defaultValue": "100"
+			},
+			"v2": {
+				"type": "Integer",
+				"defaultValue": 5
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2026-09-27T04:50:06Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

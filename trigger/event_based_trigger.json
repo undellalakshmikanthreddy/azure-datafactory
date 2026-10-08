@@ -1,0 +1,30 @@
+{
+	"name": "event_based_trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "event_based_pipeline1",
+					"type": "PipelineReference"
+				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "event",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/adf/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/4948830a-ae2c-4c73-bb24-6b0ebae7678b/resourceGroups/adf-RG/providers/Microsoft.Storage/storageAccounts/adfstorageaccount54",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

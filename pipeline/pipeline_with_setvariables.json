@@ -1,0 +1,72 @@
+{
+	"name": "pipeline_with_setvariables",
+	"properties": {
+		"activities": [
+			{
+				"name": "Wait1",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": {
+						"value": "@variables('var1')",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "Wait2",
+				"type": "Wait",
+				"dependsOn": [
+					{
+						"activity": "Set variable1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": {
+						"value": "@variables('var2')",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Wait1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "var2",
+					"value": 3
+				}
+			}
+		],
+		"variables": {
+			"var1": {
+				"type": "Integer",
+				"defaultValue": 5
+			},
+			"var2": {
+				"type": "Integer",
+				"defaultValue": 8
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2026-09-26T09:25:52Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

@@ -1,0 +1,43 @@
+{
+	"name": "logic_apps_testing",
+	"properties": {
+		"activities": [
+			{
+				"name": "Wait1",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 10
+				}
+			},
+			{
+				"name": "Web1",
+				"type": "WebActivity",
+				"dependsOn": [
+					{
+						"activity": "Wait1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "GET",
+					"url": "https://prod-30.northcentralus.logic.azure.com:443/workflows/40cd881389844930bc7ee62d9d648920/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=czDnNzd0HieaqGE0ZWsA03O-_Gk5RE7-S5jmmFDXRec"
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2026-10-07T02:09:20Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

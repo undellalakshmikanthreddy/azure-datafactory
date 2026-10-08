@@ -1,0 +1,19 @@
+{
+	"name": "act_pipe_1",
+	"properties": {
+		"activities": [
+			{
+				"name": "act_wait",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 5
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2026-09-26T05:19:27Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

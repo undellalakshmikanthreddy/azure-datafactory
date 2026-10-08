@@ -1,0 +1,21 @@
+{
+	"name": "datafactory-workspace54",
+	"properties": {
+		"globalParameters": {
+			"wait_time": {
+				"type": "int",
+				"value": 60
+			}
+		},
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "798b95cc-70cf-45ef-8762-bab792e9533e",
+		"tenantId": "4cf4e5ba-55a6-462d-a0f3-4b45ad06bfa3"
+	}
+}
