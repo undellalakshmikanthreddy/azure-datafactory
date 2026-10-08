@@ -1,0 +1,102 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "datafactory-workspace54"
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase2_password": {
+			"value": ""
+		},
+		"LS_AzureDataLakeStorage_accountKey": {
+			"value": ""
+		},
+		"LS_AzureSqlDatabase_password": {
+			"value": ""
+		},
+		"LS_EXT_STO_PRO_password": {
+			"value": ""
+		},
+		"LS_SOURCE_password": {
+			"value": ""
+		},
+		"LS_TARGET_GEN2_accountKey": {
+			"value": ""
+		},
+		"dataset_AzureSqlDatabase_storedprocedure_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "adfsqlserver54.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "adf-sql-db"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "sqladmin"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_server": {
+			"value": "adfsqlserver54.database.windows.net"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_database": {
+			"value": "adf-sql-db"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_userName": {
+			"value": "sqladmin"
+		},
+		"LS_AzureDataLakeStorage_properties_typeProperties_url": {
+			"value": "https://adfstorageaccount54.dfs.core.windows.net/"
+		},
+		"LS_AzureSqlDatabase_properties_typeProperties_server": {
+			"value": "adfsqlserver54.database.windows.net"
+		},
+		"LS_AzureSqlDatabase_properties_typeProperties_database": {
+			"value": "adf-sql-db"
+		},
+		"LS_AzureSqlDatabase_properties_typeProperties_userName": {
+			"value": "sqladmin"
+		},
+		"LS_EXT_STO_PRO_properties_typeProperties_server": {
+			"value": "adfsqlserver54.database.windows.net"
+		},
+		"LS_EXT_STO_PRO_properties_typeProperties_database": {
+			"value": "adf-sql-db"
+		},
+		"LS_EXT_STO_PRO_properties_typeProperties_userName": {
+			"value": "sqladmin"
+		},
+		"LS_SOURCE_properties_typeProperties_server": {
+			"value": "adfsqlserver54.database.windows.net"
+		},
+		"LS_SOURCE_properties_typeProperties_database": {
+			"value": "adf-sql-db"
+		},
+		"LS_SOURCE_properties_typeProperties_userName": {
+			"value": "sqladmin"
+		},
+		"LS_TARGET_GEN2_properties_typeProperties_url": {
+			"value": "https://adfstorageaccount54.dfs.core.windows.net/"
+		},
+		"dataset_AzureSqlDatabase_storedprocedure_properties_typeProperties_server": {
+			"value": "adfsqlserver54.database.windows.net"
+		},
+		"dataset_AzureSqlDatabase_storedprocedure_properties_typeProperties_database": {
+			"value": "adf-sql-db"
+		},
+		"dataset_AzureSqlDatabase_storedprocedure_properties_typeProperties_userName": {
+			"value": "sqladmin"
+		},
+		"event_based_trigger_properties_typeProperties_scope": {
+			"value": "/subscriptions/4948830a-ae2c-4c73-bb24-6b0ebae7678b/resourceGroups/adf-RG/providers/Microsoft.Storage/storageAccounts/adfstorageaccount54"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
